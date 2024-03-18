@@ -1,0 +1,171 @@
+/* Свойство для контроля переполнения потока.
+Включать для нахождения элементов, которые выходят за ширину страницы
+если появляется горизонтальная прокрутка на странице
+*/
+/* * {
+  outline: solid 1px red;
+} */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none;
+}
+
+a:focus,
+*:active {
+  outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+
+html {
+  /*плавная прокрутка по якорям*/
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/*Обнуление стилей*/
+body {
+  line-height: 1;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  padding: 0;
+}
+
+input:-internal-autofill-selected {
+  background-color: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+ul {
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+ul li {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.icon-svg {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --main-color: #ffffff;
+  --title-color: #ffffff;
+  --main-font: "Montserrat", Arial, Helvetica, sans-serif;
+  --main-bg: #000000;
+  --main-fz: 0.9rem;
+  --main-fz-s: 0.7rem;
+  --container-w: 80vw;
+  --container-ws: 90vw;
+  --nav-color: #999999;
+  --active-link-color: #0088cc;
+  --button-text: #ffffff;
+}
+
+/*Basic components*/
+body {
+  width: 100%;
+  background: var(--main-bg);
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 300;
+  font-size: var(--main-fz);
+}
+
+body.not-scroll {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: var(--main-fz-s);
+  }
+}
+
+a {
+  color: var(--title-color);
+}
+a:hover,
+a:visited {
+  color: var(--title-color);
+}
+
+.container {
+  max-width: var(--container-w);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: var(--container-ws);
+  }
+}
+
+.line-animation-box {
+  transform: translate3d(0px, 55vh, 0px);
+  animation: load_block_line 0.8s ease both;
+  position: relative;
+  z-index: 20;
+}
