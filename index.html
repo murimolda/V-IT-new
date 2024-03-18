@@ -3,25 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style/style.css">
   <title>V-IT</title>
 </head>
 <body>
   <header class="header">
-    <div class="header-main">
+    <div class="container header-container">
       <div class="header-logo">
-        <a href="/" aria-label="Главная страница">
-
+        <a href="index.html" aria-label="Главная страница">
+          <img src="assets/image/логотип-V-IT.webp" alt="logo">
         </a>
       </div>
-      <button class="open-mob-nav"><span>Menu</span></button>
       <div class="nav header-nav">
         <nav>
           <ul>
             <li><a href="#" class="root-item">О нас</a></li>
             <li><a href="#" class="root-item">Портфолио</a></li>
+            <li><a href="#" class="root-item">Контакты</a></li>
           </ul>
         </nav>
       </div>
+    </div>
   </header>
+  <div id="form" class="contact-form">
+    <h2>Contact Us</h2>
+    <form action="process_form.php" method="post">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+  </div>
+  <main>
+    <section class="main-banner">
+      <div class="container">
+        <div class="main-banner-title">
+          <h1>Создание сайтов под ключ</h1>
+        </div>
+        <div class="main-banner-info">
+          <div class="main-banner-text">
+          <p>Зачем бизнесу нужен сайт? Сайты помогают:
+            <ul>
+              <li>— Привлекать покупателя и продавать.</li>
+              <li>— Рассказать клиентам и партнерам о себе.</li>
+              <li>— Получать прибыль от продаж, не имея физического магазина.</li>
+              <li>— Ускорить получение обратной связи от клиентов.</li>
+              <li>— Сэкономить время обработки заказов, используя подробные формы и онлайн-калькуляторы.</li>
+              <li>— Получить мгновенный доступ к зарубежным клиентам.</li>
+            </ul>
+          </p>
+          </div>
+          <div class="main-banner-form">
+            <a href="#form" class="form-open-button">
+              <span>Заказать сайт</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="line-box">
+
+    </section>
+  </main>
 </body>
 </html>
