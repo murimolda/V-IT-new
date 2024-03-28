@@ -121,10 +121,13 @@ p {
   --nav-color: #999999;
   --active-link-color: #0088cc;
   --button-text: #ffffff;
+  --title-margin: 1rem;
+  --block-margin: 0.8rem;
 }
 
 /*Basic components*/
 body {
+  position: relative;
   width: 100%;
   background: var(--main-bg);
   color: var(--main-color);
@@ -153,6 +156,7 @@ a:visited {
 }
 
 .container {
+  padding: 20px 0;
   max-width: var(--container-w);
   margin: 0 auto;
 }
@@ -163,9 +167,308 @@ a:visited {
   }
 }
 
+.header-container {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--title-margin);
+}
+
+.header-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.header-logo a img {
+  width: 100%;
+}
+
+.header-nav ul {
+  display: flex;
+  align-items: center;
+  gap: var(--title-margin);
+}
+
+.header-form {
+  background-image: url(../image/bg-font-line.webp);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: left center;
+  animation: mainTitle 20s linear infinite;
+  padding: 0;
+  background-size: 250vw;
+}
+
+.header-form:hover a {
+  text-decoration: overline;
+}
+
+.main-banner-wrap {
+  display: flex;
+}
+
+.main-banner-title {
+  margin-bottom: 2rem;
+}
+
+.main-banner-title h1 {
+  font-size: 3em;
+  background-image: url(../image/bg-font-line.webp);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: left center;
+  animation: mainTitle 20s linear infinite;
+  padding: 0;
+  background-size: 250vw;
+}
+
+@keyframes mainTitle {
+  0% {
+    background-position: left 0 center;
+  }
+
+  50% {
+    background-position: left 100% center;
+  }
+
+  100% {
+    background-position: left 0 center;
+  }
+}
+
+.main-banner-info {
+  margin-bottom: var(--title-margin);
+  width: 75%;
+}
+
+.main-banner-info h2 {
+  margin-bottom: var(--block-margin);
+}
+
+.main-banner-form {
+  margin-top: 2rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.main-banner-form a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+.main-banner-form a span {
+  text-align: center;
+}
+
+.main-banner-form a i {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-banner-form i img {
+  width: 100%;
+}
+
+.main-banner-text ul {
+  margin-top: var(--title-margin);
+}
+
+.main-banner-text li {
+  line-height: 1.5;
+}
+
+.main-banner-list ul {
+  margin-top: var(--block-margin);
+  display: flex;
+  gap: var(--title-margin);
+}
+
+/*Анимированная линия*/
 .line-animation-box {
-  transform: translate3d(0px, 55vh, 0px);
-  animation: load_block_line 0.8s ease both;
+  background: linear-gradient(148deg, #0779f2, #3d43c7, #791cc1);
   position: relative;
   z-index: 20;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.line-animation-box p {
+  text-align: center;
+  white-space: nowrap;
+  animation: moveText 8s infinite linear;
+}
+
+.double-space {
+  white-space: nowrap;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.about-section {
+  background-color: var(--main-color);
+  color: var(--main-bg);
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.about-image {
+  width: 40%;
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.about-wrap {
+  width: 50%;
+}
+
+.about-wrap h2 {
+  margin-bottom: 1rem;
+}
+
+.about-wrap p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+.about-wrap h3 {
+  margin-bottom: 0.8rem;
+}
+
+.about-wrap ul {
+  margin-bottom: 0.8rem;
+}
+
+.about-wrap li {
+  line-height: 1.5;
+}
+
+.portfolio-wrap {
+  display: flex;
+  gap: var(--title-margin);
+  justify-content: space-between;
+  align-items: center;
+  visibility: visible;
+  animation-name: fadeInUp;
+  position: relative;
+  padding: 20px 0;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+.portfolio-info {
+  width: 45%;
+  line-height: 1.5;
+}
+
+.portfolio-info h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  background-image: url(../image/bg-font-line.webp);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: left center;
+  animation: mainTitle 20s linear infinite;
+  padding: 0;
+  background-size: 250vw;
+}
+
+.portfolio-image {
+  width: 50%;
+  position: relative;
+}
+
+.portfolio-image img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.portfolio-form {
+  position: absolute;
+  top: -30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: pulse 1s infinite alternate;
+}
+
+.form-button-left {
+  left: -70px;
+}
+
+.form-button-right {
+  right: -70px;
+}
+
+.portfolio-form a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+.portfolio-form a span {
+  text-align: center;
+}
+
+.portfolio-form a i {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.portfolio-form i img {
+  width: 100%;
 }
