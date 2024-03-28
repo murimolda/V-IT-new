@@ -125,6 +125,7 @@ p {
 
 /*Basic components*/
 body {
+  position: relative;
   width: 100%;
   background: var(--main-bg);
   color: var(--main-color);
@@ -163,9 +164,56 @@ a:visited {
   }
 }
 
+.header-container {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.header-logo a img {
+  width: 100%;
+}
+
+.header-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .line-animation-box {
-  transform: translate3d(0px, 55vh, 0px);
-  animation: load_block_line 0.8s ease both;
+  background: linear-gradient(148deg, #0779f2, #3d43c7, #791cc1);
   position: relative;
   z-index: 20;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.line-animation-box p {
+  text-align: center;
+  animation: moveText 8s infinite linear;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(25vw);
+  }
+  50% {
+    transform: translateX(50vw);
+  }
+  75% {
+    transform: translateX(75vw);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
 }
