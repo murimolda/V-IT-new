@@ -121,6 +121,8 @@ p {
   --nav-color: #999999;
   --active-link-color: #0088cc;
   --button-text: #ffffff;
+  --title-margin: 1rem;
+  --block-margin: 0.8rem;
 }
 
 /*Basic components*/
@@ -169,12 +171,13 @@ a:visited {
   padding: 20px 0;
   display: flex;
   align-items: center;
-  gap: 1em;
+  justify-content: space-between;
+  gap: var(--title-margin);
 }
 
 .header-logo {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 .header-logo a img {
@@ -184,7 +187,7 @@ a:visited {
 .header-nav ul {
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: var(--title-margin);
 }
 
 .header-form {
@@ -201,12 +204,16 @@ a:visited {
   text-decoration: overline;
 }
 
+.main-banner-wrap {
+  display: flex;
+}
+
 .main-banner-title {
   margin-bottom: 2rem;
 }
 
 .main-banner-title h1 {
-  font-size: 2.8em;
+  font-size: 3em;
   background-image: url(../image/bg-font-line.webp);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -231,14 +238,16 @@ a:visited {
 }
 
 .main-banner-info {
-  position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: var(--title-margin);
+  width: 75%;
+}
+
+.main-banner-info h2 {
+  margin-bottom: var(--block-margin);
 }
 
 .main-banner-form {
-  position: absolute;
-  top: 0;
-  right: 0;
+  margin-top: 2rem;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -278,11 +287,17 @@ a:visited {
 }
 
 .main-banner-text ul {
-  margin-top: 1em;
+  margin-top: var(--title-margin);
 }
 
 .main-banner-text li {
   line-height: 1.5;
+}
+
+.main-banner-list ul {
+  margin-top: var(--block-margin);
+  display: flex;
+  gap: var(--title-margin);
 }
 
 /*Анимированная линия*/
@@ -290,7 +305,7 @@ a:visited {
   background: linear-gradient(148deg, #0779f2, #3d43c7, #791cc1);
   position: relative;
   z-index: 20;
-  height: 1.5rem;
+  height: 24px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -363,4 +378,97 @@ a:visited {
 
 .about-wrap li {
   line-height: 1.5;
+}
+
+.portfolio-wrap {
+  display: flex;
+  gap: var(--title-margin);
+  justify-content: space-between;
+  align-items: center;
+  visibility: visible;
+  animation-name: fadeInUp;
+  position: relative;
+  padding: 20px 0;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+.portfolio-info {
+  width: 45%;
+  line-height: 1.5;
+}
+
+.portfolio-info h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  background-image: url(../image/bg-font-line.webp);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: left center;
+  animation: mainTitle 20s linear infinite;
+  padding: 0;
+  background-size: 250vw;
+}
+
+.portfolio-image {
+  width: 50%;
+  position: relative;
+}
+
+.portfolio-image img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.portfolio-form {
+  position: absolute;
+  top: -30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: pulse 1s infinite alternate;
+}
+
+.form-button-left {
+  left: -70px;
+}
+
+.form-button-right {
+  right: -70px;
+}
+
+.portfolio-form a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+.portfolio-form a span {
+  text-align: center;
+}
+
+.portfolio-form a i {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.portfolio-form i img {
+  width: 100%;
 }
