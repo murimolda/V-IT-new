@@ -114,15 +114,17 @@ p {
   --title-color: #ffffff;
   --main-font: "Montserrat", Arial, Helvetica, sans-serif;
   --main-bg: #000000;
-  --main-fz: 0.9rem;
-  --main-fz-s: 0.7rem;
+  --main-fz: 24px;
+  --main-fz-s: 20px;
   --container-w: 80vw;
   --container-ws: 90vw;
   --nav-color: #999999;
   --active-link-color: #0088cc;
   --button-text: #ffffff;
-  --title-margin: 1rem;
-  --block-margin: 0.8rem;
+  --title-margin: 30px;
+  --block-margin: 24px;
+  --column-gap: 24px;
+  --wrap-gap: 30px;
 }
 
 /*Basic components*/
@@ -167,17 +169,24 @@ a:visited {
   }
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  background: var(--main-bg);
+  opacity: 0.8;
+}
+
 .header-container {
   padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--title-margin);
+  gap: var(--wrap-gap);
 }
 
 .header-logo {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
 }
 
 .header-logo a img {
@@ -187,7 +196,7 @@ a:visited {
 .header-nav ul {
   display: flex;
   align-items: center;
-  gap: var(--title-margin);
+  gap: var(--wrap-gap);
 }
 
 .header-form {
@@ -204,16 +213,20 @@ a:visited {
   text-decoration: overline;
 }
 
+.main {
+  padding-top: 90px;
+}
+
 .main-banner-wrap {
   display: flex;
 }
 
 .main-banner-title {
-  margin-bottom: 2rem;
+  margin-bottom: var(--title-margin);
 }
 
 .main-banner-title h1 {
-  font-size: 3em;
+  font-size: 60px;
   background-image: url(../image/bg-font-line.webp);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -238,7 +251,7 @@ a:visited {
 }
 
 .main-banner-info {
-  margin-bottom: var(--title-margin);
+  margin-bottom: var(--block-margin);
   width: 75%;
 }
 
@@ -247,9 +260,9 @@ a:visited {
 }
 
 .main-banner-form {
-  margin-top: 2rem;
-  width: 80px;
-  height: 80px;
+  margin-top: 50px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   animation: pulse 1s infinite alternate;
 }
@@ -287,7 +300,7 @@ a:visited {
 }
 
 .main-banner-text ul {
-  margin-top: var(--title-margin);
+  margin-top: var(--block-margin);
 }
 
 .main-banner-text li {
@@ -295,9 +308,9 @@ a:visited {
 }
 
 .main-banner-list ul {
-  margin-top: var(--block-margin);
+  margin-bottom: var(--block-margin);
   display: flex;
-  gap: var(--title-margin);
+  gap: var(--wrap-gap);
 }
 
 /*Анимированная линия*/
@@ -305,7 +318,7 @@ a:visited {
   background: linear-gradient(148deg, #0779f2, #3d43c7, #791cc1);
   position: relative;
   z-index: 20;
-  height: 24px;
+  height: 36px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -335,13 +348,15 @@ a:visited {
 .about-section {
   background-color: var(--main-color);
   color: var(--main-bg);
+  padding-top: var(--title-margin);
+  padding-bottom: var(--title-margin);
 }
 
 .about-container {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .about-image {
@@ -359,21 +374,21 @@ a:visited {
 }
 
 .about-wrap h2 {
-  margin-bottom: 1rem;
+  margin-bottom: var(--title-margin);
 }
 
 .about-wrap p {
-  font-size: 0.9em;
+  font-size: var(--main-fz-s);
   line-height: 1.5;
-  margin-bottom: 0.8rem;
+  margin-bottom: var(--block-margin);
 }
 
 .about-wrap h3 {
-  margin-bottom: 0.8rem;
+  margin-bottom: var(--block-margin);
 }
 
 .about-wrap ul {
-  margin-bottom: 0.8rem;
+  margin-bottom: var(--block-margin);
 }
 
 .about-wrap li {
@@ -382,13 +397,14 @@ a:visited {
 
 .portfolio-wrap {
   display: flex;
-  gap: var(--title-margin);
+  gap: var(--wrap-gap);
   justify-content: space-between;
   align-items: center;
   visibility: visible;
   animation-name: fadeInUp;
   position: relative;
-  padding: 20px 0;
+  padding-top: 20px;
+  height: 550px;
 }
 
 @keyframes fadeInUp {
@@ -406,14 +422,14 @@ a:visited {
 }
 
 .portfolio-info {
-  width: 45%;
+  width: 46%;
   line-height: 1.5;
 }
 
 .portfolio-info h2 {
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   background-image: url(../image/bg-font-line.webp);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -426,28 +442,40 @@ a:visited {
 .portfolio-image {
   width: 50%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.portfolio-image img {
+.portfolio-image a {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 500px;
+  width: 700px;
+}
+
+.portfolio-image a img {
   width: 100%;
   vertical-align: middle;
 }
 
 .portfolio-form {
-  position: absolute;
   top: -30px;
-  width: 80px;
-  height: 80px;
+  position: absolute;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   animation: pulse 1s infinite alternate;
 }
 
 .form-button-left {
-  left: -70px;
+  left: -100px;
 }
 
 .form-button-right {
-  right: -70px;
+  top: -40px;
+  right: -100px;
 }
 
 .portfolio-form a {
@@ -471,4 +499,92 @@ a:visited {
 
 .portfolio-form i img {
   width: 100%;
+}
+
+.reviews {
+  background: var(--main-color);
+  color: var(--main-bg);
+  padding-top: var(--title-margin);
+  padding-bottom: var(--title-margin);
+}
+
+.reviews-wrap {
+  display: flex;
+  gap: var(--wrap-gap);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reviews-wrap h2 {
+  text-align: center;
+}
+
+.reviews-image {
+  flex: 1;
+  width: 40%;
+}
+
+.reviews-image {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.reviews-block {
+  width: 50%;
+  position: relative;
+}
+
+.reviews-info {
+  margin-top: var(--block-margin);
+  text-align: right;
+}
+
+.reviews-padding-left {
+  margin-left: 100px;
+}
+
+.reviews-padding-right {
+  margin-right: 100px;
+  text-align: left;
+}
+
+.reviews-text {
+  position: relative;
+  padding: 20px;
+}
+
+.reviews-text:after {
+  content: "";
+  background: radial-gradient(97.43% 135.77% at -6.29% 50.94%, #ff8fc5 0%, #a162ff 47.76%, #3aedff 99.63%);
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: 150%;
+}
+
+.reviews-text h4 {
+  line-height: 1.5;
+  margin-bottom: var(--block-margin);
+}
+
+.reviews-sub {
+  font-size: 0.8em;
+}
+.sub-m {
+  font-size: 0.7em;
+}
+
+.footer-container {
+  padding: 40px 0;
+  display: flex;
+  gap: var(--wrap-gap);
+  justify-content: space-between;
+}
+
+.footer-list {
+  display: flex;
+  gap: 10px;
 }
