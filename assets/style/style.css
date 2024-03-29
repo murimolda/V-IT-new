@@ -526,16 +526,32 @@ a:visited {
 
 .reviews-info {
   margin-top: var(--block-margin);
+  text-align: right;
 }
 
-.reviews-item.reviews-right {
-  padding-left: 100px;
+.reviews-padding-left {
+  margin-left: 100px;
+}
+
+.reviews-padding-right {
+  margin-right: 100px;
 }
 
 .reviews-text {
+  position: relative;
   padding: 20px;
-  border-radius: 30px;
-  box-shadow: 0px 0px 20px 0px rgb(5 47 240 / 44%) inset;
+}
+
+.reviews-text:after {
+  content: "";
+  background: radial-gradient(97.43% 135.77% at -6.29% 50.94%, #ff8fc5 0%, #a162ff 47.76%, #3aedff 99.63%);
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: 150%;
 }
 
 .reviews-text h4 {
@@ -548,4 +564,16 @@ a:visited {
 }
 .sub-m {
   font-size: 0.7em;
+}
+
+.footer-container {
+  padding: 40px 0;
+  display: flex;
+  gap: var(--wrap-gap);
+  justify-content: space-between;
+}
+
+.footer-list {
+  display: flex;
+  gap: 10px;
 }
