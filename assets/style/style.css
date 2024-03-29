@@ -114,15 +114,15 @@ p {
   --title-color: #ffffff;
   --main-font: "Montserrat", Arial, Helvetica, sans-serif;
   --main-bg: #000000;
-  --main-fz: 0.9rem;
-  --main-fz-s: 0.7rem;
+  --main-fz: 24px;
+  --main-fz-s: 20px;
   --container-w: 80vw;
   --container-ws: 90vw;
   --nav-color: #999999;
   --active-link-color: #0088cc;
   --button-text: #ffffff;
-  --title-margin: 1rem;
-  --block-margin: 0.8rem;
+  --title-margin: 30px;
+  --block-margin: 24px;
 }
 
 /*Basic components*/
@@ -167,6 +167,13 @@ a:visited {
   }
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  background: var(--main-bg);
+  opacity: 0.8;
+}
+
 .header-container {
   padding: 20px 0;
   display: flex;
@@ -204,16 +211,20 @@ a:visited {
   text-decoration: overline;
 }
 
+.main {
+  padding-top: 90px;
+}
+
 .main-banner-wrap {
   display: flex;
 }
 
 .main-banner-title {
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
 .main-banner-title h1 {
-  font-size: 3em;
+  font-size: 60px;
   background-image: url(../image/bg-font-line.webp);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -238,7 +249,7 @@ a:visited {
 }
 
 .main-banner-info {
-  margin-bottom: var(--title-margin);
+  margin-bottom: var(--block-margin);
   width: 75%;
 }
 
@@ -247,9 +258,9 @@ a:visited {
 }
 
 .main-banner-form {
-  margin-top: 2rem;
-  width: 80px;
-  height: 80px;
+  margin-top: 50px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   animation: pulse 1s infinite alternate;
 }
@@ -287,7 +298,7 @@ a:visited {
 }
 
 .main-banner-text ul {
-  margin-top: var(--title-margin);
+  margin-top: var(--block-margin);
 }
 
 .main-banner-text li {
@@ -295,7 +306,7 @@ a:visited {
 }
 
 .main-banner-list ul {
-  margin-top: var(--block-margin);
+  margin-bottom: var(--block-margin);
   display: flex;
   gap: var(--title-margin);
 }
@@ -305,7 +316,7 @@ a:visited {
   background: linear-gradient(148deg, #0779f2, #3d43c7, #791cc1);
   position: relative;
   z-index: 20;
-  height: 24px;
+  height: 36px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -335,13 +346,15 @@ a:visited {
 .about-section {
   background-color: var(--main-color);
   color: var(--main-bg);
+  padding-top: var(--title-margin);
+  padding-bottom: var(--title-margin);
 }
 
 .about-container {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 .about-image {
@@ -359,21 +372,21 @@ a:visited {
 }
 
 .about-wrap h2 {
-  margin-bottom: 1rem;
+  margin-bottom: var(--title-margin);
 }
 
 .about-wrap p {
-  font-size: 0.9em;
+  font-size: var(--main-fz-s);
   line-height: 1.5;
-  margin-bottom: 0.8rem;
+  margin-bottom: var(--block-margin);
 }
 
 .about-wrap h3 {
-  margin-bottom: 0.8rem;
+  margin-bottom: var(--block-margin);
 }
 
 .about-wrap ul {
-  margin-bottom: 0.8rem;
+  margin-bottom: var(--block-margin);
 }
 
 .about-wrap li {
@@ -388,7 +401,8 @@ a:visited {
   visibility: visible;
   animation-name: fadeInUp;
   position: relative;
-  padding: 20px 0;
+  padding-top: 20px;
+  height: 550px;
 }
 
 @keyframes fadeInUp {
@@ -406,14 +420,14 @@ a:visited {
 }
 
 .portfolio-info {
-  width: 45%;
+  width: 46%;
   line-height: 1.5;
 }
 
 .portfolio-info h2 {
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   background-image: url(../image/bg-font-line.webp);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -426,28 +440,40 @@ a:visited {
 .portfolio-image {
   width: 50%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.portfolio-image img {
+.portfolio-image a {
+  display: block;
+  overflow: hidden;
+  height: 450px;
+  width: 650px;
+  border-radius: 5px;
+}
+
+.portfolio-image a img {
   width: 100%;
   vertical-align: middle;
 }
 
 .portfolio-form {
-  position: absolute;
   top: -30px;
-  width: 80px;
-  height: 80px;
+  position: absolute;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   animation: pulse 1s infinite alternate;
 }
 
 .form-button-left {
-  left: -70px;
+  left: -100px;
 }
 
 .form-button-right {
-  right: -70px;
+  top: -40px;
+  right: -100px;
 }
 
 .portfolio-form a {
@@ -471,4 +497,25 @@ a:visited {
 
 .portfolio-form i img {
   width: 100%;
+}
+
+.reviews {
+  background: var(--main-color);
+  color: var(--main-bg);
+}
+.reviews-wrap {
+}
+.reviews-image {
+}
+.reviews-block {
+}
+.reviews-info {
+}
+.reviews-item {
+}
+.reviews-text {
+}
+.reviews-sub {
+}
+.sub-m {
 }
