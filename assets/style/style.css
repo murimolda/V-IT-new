@@ -324,10 +324,17 @@ a:visited {
   overflow: hidden;
 }
 
-.line-animation-box p {
-  text-align: center;
+.text-container {
   white-space: nowrap;
+  display: inline-block;
+}
+
+.text-container:nth-child(1) {
   animation: moveText 8s infinite linear;
+}
+
+.text-container:nth-child(2) {
+  animation: moveText 8s infinite linear -8s;
 }
 
 .double-space {
@@ -340,8 +347,17 @@ a:visited {
   0% {
     transform: translateX(0%);
   }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
   100% {
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
 }
 
