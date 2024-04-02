@@ -430,7 +430,7 @@ a:visited {
 .about-section {
   padding-top: var(--title-margin);
   padding-bottom: var(--title-margin);
-  background-image: url(../image/vecteezy_cyber-network-protection-future-technology-background_.jpg);
+  background-image: url(../image/about-bg.webp);
 }
 
 .about-container {
