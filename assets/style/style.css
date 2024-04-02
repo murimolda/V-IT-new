@@ -114,6 +114,7 @@ p {
   --title-color: #ffffff;
   --main-font: "Montserrat", Arial, Helvetica, sans-serif;
   --main-bg: #000000;
+  --portfolio-bg: #0d1321;
   --main-fz: 24px;
   --main-fz-s: 16px;
   --container-w: 86vw;
@@ -194,6 +195,18 @@ a:visited {
   width: 100%;
 }
 
+.header-name h3 {
+  font-size: 1.4em;
+  background-image: url(../image/bg-font-line.webp);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: left center;
+  animation: mainTitle 20s linear infinite;
+  padding: 5px 0;
+  background-size: 250vw;
+  text-align: center;
+}
+
 .header-nav ul {
   display: flex;
   align-items: center;
@@ -229,7 +242,16 @@ a:visited {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: calc(100vh - 130px);
-  backdrop-filter: blur(40px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-banner-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-banner-wrap {
@@ -237,6 +259,7 @@ a:visited {
   width: 100%;
   justify-content: center;
   position: relative;
+  flex-grow: 1;
 }
 
 .main-banner-title {
@@ -244,7 +267,7 @@ a:visited {
 }
 
 .main-banner-title h1 {
-  font-size: 56px;
+  font-size: 2.4em;
   background-image: url(../image/bg-font-line.webp);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -277,9 +300,8 @@ a:visited {
 
 .main-banner-info h2 {
   margin-bottom: var(--title-margin);
-  text-shadow:
-    1px 2px #020538,
-    0 0 0.2em #000000;
+  text-shadow: 3px -4px 5px #000000;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .main-technology-wrap {
@@ -288,14 +310,13 @@ a:visited {
   gap: 50px;
   align-items: center;
   justify-content: flex-end;
-  flex-shrink: 1;
 }
 
 .main-technology-item {
   width: 33%;
   min-height: 300px;
   padding: var(--wrap-gap);
-  background: linear-gradient(148deg, #0779f2, #3d43c7, #791cc1);
+  background: linear-gradient(148deg, rgb(7, 121, 242), #3d43c7, #791cc1);
   border-radius: 10px;
 }
 
@@ -371,17 +392,17 @@ a:visited {
 .double-space {
   white-space: nowrap;
   display: inline-block;
-  margin-right: 30px;
+  margin: 0 30px;
 }
 
 .text1 {
-  animation: textMove1 40s infinite linear;
-  animation-delay: -40s;
+  animation: textMove1 80s infinite linear;
+  animation-delay: -80s;
 }
 
 .text2 {
-  animation: textMove2 40s infinite linear;
-  animation-delay: -20s;
+  animation: textMove2 80s infinite linear;
+  animation-delay: -40s;
 }
 
 @keyframes textMove1 {
@@ -435,9 +456,7 @@ a:visited {
 .about-wrap p {
   line-height: 1.2;
   margin-bottom: var(--block-margin);
-  text-shadow:
-    1px 2px #020538,
-    0 0 0.2em #000000;
+  text-shadow: 3px -2px 5px #000000;
 }
 
 .about-wrap h3 {
@@ -450,6 +469,10 @@ a:visited {
 
 .about-wrap li {
   line-height: 1.5;
+}
+
+.portfolio-section {
+  background-color: var(--portfolio-bg);
 }
 
 .portfolio-section h2 {
