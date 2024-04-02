@@ -115,7 +115,7 @@ p {
   --main-font: "Montserrat", Arial, Helvetica, sans-serif;
   --main-bg: #000000;
   --main-fz: 24px;
-  --main-fz-s: 20px;
+  --main-fz-s: 16px;
   --container-w: 86vw;
   --container-ws: 94vw;
   --nav-color: #999999;
@@ -143,7 +143,7 @@ body.not-scroll {
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   body {
     font-size: var(--main-fz-s);
   }
@@ -158,7 +158,7 @@ a:visited {
 }
 
 .container {
-  padding: 20px 0;
+  padding: var(--block-margin) 0;
   max-width: var(--container-w);
   margin: 0 auto;
 }
@@ -214,6 +214,12 @@ a:visited {
   text-decoration: overline;
 }
 
+@media screen and (max-width: 1280px) {
+  .header-form a {
+    font-size: 1.3em;
+  }
+}
+
 .main {
   padding-top: 90px;
 }
@@ -223,10 +229,13 @@ a:visited {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: calc(100vh - 130px);
+  backdrop-filter: blur(40px);
 }
 
 .main-banner-wrap {
   display: flex;
+  width: 100%;
+  justify-content: center;
   position: relative;
 }
 
@@ -243,6 +252,7 @@ a:visited {
   animation: mainTitle 20s linear infinite;
   padding: 5px 0;
   background-size: 250vw;
+  text-align: center;
 }
 
 @keyframes mainTitle {
@@ -260,24 +270,33 @@ a:visited {
 }
 
 .main-banner-info {
-  margin-bottom: var(--title-margin);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main-banner-info h2 {
   margin-bottom: var(--title-margin);
+  text-shadow:
+    1px 2px #020538,
+    0 0 0.2em #000000;
 }
 
 .main-technology-wrap {
   display: flex;
-  min-height: 45vh;
+  margin-top: auto;
   gap: 50px;
   align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 1;
 }
 
 .main-technology-item {
-  width: 300px;
+  width: 33%;
+  min-height: 300px;
   padding: var(--wrap-gap);
   background: linear-gradient(148deg, #0779f2, #3d43c7, #791cc1);
+  border-radius: 10px;
 }
 
 .main-technology-item h4 {
@@ -291,7 +310,9 @@ a:visited {
 }
 
 .main-banner-form {
-  margin-left: 30px;
+  position: absolute;
+  right: 60px;
+  top: 130px;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -384,6 +405,7 @@ a:visited {
 .about-section {
   padding-top: var(--title-margin);
   padding-bottom: var(--title-margin);
+  background-image: url(../image/vecteezy_cyber-network-protection-future-technology-background_.jpg);
 }
 
 .about-container {
@@ -393,28 +415,29 @@ a:visited {
   gap: 24px;
 }
 
-.about-image {
-  width: 40%;
-  flex: 1;
-}
-
-.about-image img {
-  width: 100%;
-  vertical-align: middle;
-}
-
 .about-wrap {
-  width: 50%;
+  width: 40%;
 }
 
 .about-wrap h2 {
   margin-bottom: var(--title-margin);
+  font-size: 2.6em;
+  font-weight: bold;
+  background-image: url(../image/bg-font-line.webp);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: left center;
+  animation: mainTitle 20s linear infinite;
+  padding: 0;
+  background-size: 250vw;
 }
 
 .about-wrap p {
-  font-size: var(--main-fz-s);
-  line-height: 1.5;
+  line-height: 1.2;
   margin-bottom: var(--block-margin);
+  text-shadow:
+    1px 2px #020538,
+    0 0 0.2em #000000;
 }
 
 .about-wrap h3 {
@@ -430,7 +453,7 @@ a:visited {
 }
 
 .portfolio-section h2 {
-  font-size: 60px;
+  font-size: 2.6em;
   font-weight: bold;
   text-align: center;
   background-image: url(../image/bg-font-line.webp);
@@ -474,7 +497,7 @@ a:visited {
 }
 
 .portfolio-info h3 {
-  font-size: 44px;
+  font-size: 2em;
   font-weight: bold;
   background-image: url(../image/bg-font-line.webp);
   background-clip: text;
@@ -499,6 +522,7 @@ a:visited {
   justify-content: center;
   overflow: hidden;
   width: 800px;
+  position: relative;
 }
 
 .portfolio-image a.desktop-image {
@@ -517,7 +541,6 @@ a:visited {
   position: absolute;
   background-color: #fff;
   width: 250px;
-  height: 500px;
   border-radius: 20px;
   overflow: hidden;
   top: -80px;
@@ -529,6 +552,59 @@ a:visited {
 
 .portfolio-image a.mobile-image.mobile-image-left {
   left: -50px;
+}
+
+@media screen and (max-width: 1280px) {
+  .portfolio-info {
+    width: calc(100% - 600px);
+  }
+  .portfolio-wrap {
+    min-height: 500px;
+  }
+  .portfolio-image {
+    width: 600px;
+  }
+  .portfolio-image a {
+    width: 540px;
+  }
+  .portfolio-image a.mobile-image {
+    width: 180px;
+    right: -10px;
+  }
+  .portfolio-image a.mobile-image.mobile-image-left {
+    left: -10px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .portfolio-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+  }
+
+  .portfolio-info {
+    width: 540px;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .portfolio-image {
+    width: 100%;
+    text-align: center;
+    order: -1;
+    min-height: 360px;
+  }
+  .portfolio-image a.mobile-image {
+    top: 60px;
+    right: 120px;
+  }
+  .portfolio-image a.mobile-image.mobile-image-left {
+    left: 120px;
+  }
 }
 
 .portfolio-form {
@@ -571,78 +647,34 @@ a:visited {
   width: 100%;
 }
 
-.reviews {
-  padding-top: var(--title-margin);
-  padding-bottom: var(--title-margin);
+@media screen and (max-width: 1280px) {
+  .portfolio-form a span {
+    font-size: 1.3em;
+  }
+  .form-button-left {
+    left: -80px;
+  }
+  .form-button-right {
+    right: -80px;
+  }
 }
 
-.reviews-wrap {
-  display: flex;
-  gap: var(--wrap-gap);
-  align-items: center;
-  justify-content: space-between;
-}
+@media screen and (max-width: 950px) {
+  .portfolio-form a span {
+    font-size: 1.3em;
+  }
 
-.reviews-wrap h2 {
-  text-align: center;
-}
+  .portfolio-form {
+    top: -10px;
+  }
 
-.reviews-image {
-  flex: 1;
-  width: 40%;
-}
+  .form-button-left {
+    left: 40;
+  }
 
-.reviews-image {
-  width: 100%;
-  vertical-align: middle;
-}
-
-.reviews-block {
-  width: 50%;
-  position: relative;
-}
-
-.reviews-info {
-  margin-top: var(--block-margin);
-  text-align: right;
-}
-
-.reviews-padding-left {
-  margin-left: 100px;
-}
-
-.reviews-padding-right {
-  margin-right: 100px;
-  text-align: left;
-}
-
-.reviews-text {
-  position: relative;
-  padding: 20px;
-}
-
-.reviews-text:after {
-  content: "";
-  background: radial-gradient(97.43% 135.77% at -6.29% 50.94%, #ff8fc5 0%, #a162ff 47.76%, #3aedff 99.63%);
-  opacity: 0.5;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-size: 150%;
-}
-
-.reviews-text h4 {
-  line-height: 1.5;
-  margin-bottom: var(--block-margin);
-}
-
-.reviews-sub {
-  font-size: 0.8em;
-}
-.sub-m {
-  font-size: 0.7em;
+  .form-button-right {
+    right: 80px;
+  }
 }
 
 .footer-container {
