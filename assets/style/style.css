@@ -270,7 +270,7 @@ a:visited {
 .main-technology-wrap {
   display: flex;
   min-height: 45vh;
-  gap: var(--column-gap);
+  gap: 50px;
   align-items: center;
 }
 
