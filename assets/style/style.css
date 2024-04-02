@@ -219,7 +219,7 @@ a:visited {
 }
 
 .main-banner {
-  background: url(../image/programming-background-with-person-working-with-codes-on-computer.jpg);
+  background: url(../image/main-banner-bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: calc(100vh - 130px);
