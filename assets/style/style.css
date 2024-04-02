@@ -173,6 +173,7 @@ a:visited {
   position: fixed;
   width: 100%;
   background: var(--main-bg);
+  z-index: 1000;
   opacity: 0.8;
 }
 
@@ -221,10 +222,12 @@ a:visited {
   background: url(../image/programming-background-with-person-working-with-codes-on-computer.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: calc(100vh - 130px);
 }
 
 .main-banner-wrap {
   display: flex;
+  position: relative;
 }
 
 .main-banner-title {
@@ -232,13 +235,13 @@ a:visited {
 }
 
 .main-banner-title h1 {
-  font-size: 60px;
+  font-size: 56px;
   background-image: url(../image/bg-font-line.webp);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-position: left center;
   animation: mainTitle 20s linear infinite;
-  padding: 0;
+  padding: 5px 0;
   background-size: 250vw;
 }
 
@@ -257,22 +260,22 @@ a:visited {
 }
 
 .main-banner-info {
-  margin-bottom: var(--block-margin);
-  width: 75%;
+  margin-bottom: var(--title-margin);
 }
 
 .main-banner-info h2 {
-  margin-bottom: var(--block-margin);
+  margin-bottom: var(--title-margin);
 }
 
 .main-technology-wrap {
   display: flex;
+  min-height: 45vh;
   gap: var(--column-gap);
+  align-items: center;
 }
 
 .main-technology-item {
-  position: relative;
-  width: 25%;
+  width: 300px;
   padding: var(--wrap-gap);
   background: linear-gradient(148deg, #0779f2, #3d43c7, #791cc1);
 }
@@ -288,7 +291,7 @@ a:visited {
 }
 
 .main-banner-form {
-  margin-top: 50px;
+  margin-left: 30px;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -351,13 +354,13 @@ a:visited {
 }
 
 .text1 {
-  animation: textMove1 20s infinite linear;
-  animation-delay: -20s;
+  animation: textMove1 40s infinite linear;
+  animation-delay: -40s;
 }
 
 .text2 {
-  animation: textMove2 20s infinite linear;
-  animation-delay: -10s;
+  animation: textMove2 40s infinite linear;
+  animation-delay: -20s;
 }
 
 @keyframes textMove1 {
