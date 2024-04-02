@@ -311,14 +311,14 @@ a:visited {
 .main-technology-wrap {
   display: flex;
   margin-top: auto;
-  gap: 50px;
+  gap: 40px;
   align-items: stretch;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .main-technology-item {
   width: 25%;
-  min-height: 300px;
+  min-height: 200px;
   padding: var(--wrap-gap);
   background: linear-gradient(148deg, rgb(7, 121, 242), #3d43c7, #791cc1);
   border-radius: 10px;
