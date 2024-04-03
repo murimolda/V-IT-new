@@ -523,6 +523,10 @@ a:visited {
 }
 
 @media screen and (max-width: 650px) {
+  .main-banner {
+    background-position: left;
+  }
+
   .main-banner-title h1 {
     max-width: 270px;
   }
