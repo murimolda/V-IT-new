@@ -700,9 +700,6 @@ a:visited {
 }
 
 @media screen and (max-width: 650px) {
-  .about-section {
-    background-position: center left;
-  }
   .about-wrap {
     width: 90%;
     margin-left: 0;
