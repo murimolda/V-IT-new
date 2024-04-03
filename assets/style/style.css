@@ -883,6 +883,9 @@ a:visited {
 }
 
 @media screen and (max-width: 650px) {
+  .portfolio-section h2 {
+    margin-bottom: 50px;
+  }
   .portfolio-image {
     flex-direction: column;
     gap: 50px;
