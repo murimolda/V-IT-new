@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/style/style.css">
+  <?php
+    wp_head();
+  ?>
   <title>V-IT</title>
 </head>
 <body>
-  <header class="header">
+    <header class="header">
     <div class="container header-container">
       <div class="header-logo">
         <a href="index.html" aria-label="Главная страница">
-          <img src="assets/image/v-it-logo.webp" alt="logo">
+          <img src="<?php echo get_template_directory_uri();?>/assets/image/v-it-logo.webp" alt="logo">
         </a>
       </div>
       <div class="header-name">
@@ -51,7 +54,7 @@
     </div>
   </header>
   <main class="main">
-    <div class="contact-form-block">
+  <div class="contact-form-block">
       <div class="contact-form-wrap">
         <?php echo do_shortcode( '[contact-form-7 id="6824ff4" title="Header contact form"]' ); ?>
       </div>
@@ -163,16 +166,16 @@
           </div>
           <div class="portfolio-image">
             <a href="https://magiccafe.eu/" target="_blank" class="desktop-image">
-              <img src="assets/image/screen-magiccafe-eu.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-magiccafe-eu.webp" alt="">
             </a>
             <a href="https://magiccafe.eu/" target="_blank" class="mobile-image">
-              <img src="assets/image/screen-mobile-magiccafe-eu.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-magiccafe-eu.webp" alt="">
             </a>
             <div class="portfolio-form form-button-left">
               <a href="#form" class="form-open-button">
                 <span class="form-button">Order <br>similar</span>
                 <i>
-                  <img src="assets/image/button-round.webp" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
                 </i>
               </a>
             </div>
@@ -181,16 +184,16 @@
         <div class="portfolio-wrap">
           <div class="portfolio-image">
             <a href="https://cpgames.ru/" target="_blank" class="desktop-image">
-              <img src="assets/image/screen-cpgames-ru.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-cpgames-ru.webp" alt="">
             </a>
             <a href="https://cpgames.ru/" target="_blank" class="mobile-image mobile-image-left">
-              <img src="assets/image/screen-mobile-cpgames-ru.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-cpgames-ru.webp" alt="">
             </a>
             <div class="portfolio-form form-button-right">
               <a href="#form" class="form-open-button">
                 <span class="form-button">Order <br>similar</span>
                 <i>
-                  <img src="assets/image/button-round.webp" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
                 </i>
               </a>
             </div>
@@ -211,16 +214,16 @@
           </div>
           <div class="portfolio-image">
             <a href="https://sota.by/" target="_blank" class="desktop-image">
-              <img src="assets/image/screen-sota-by.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-sota-by.webp" alt="">
             </a>
             <a href="https://sota.by/" target="_blank" class="mobile-image">
-              <img src="assets/image/screen-mobile-sota-by.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-sota-by.webp" alt="">
             </a>
             <div class="portfolio-form form-button-left">
               <a href="#form" class="form-open-button">
                 <span class="form-button">Order <br>similar</span>
                 <i>
-                  <img src="assets/image/button-round.webp" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
                 </i>
               </a>
             </div>
@@ -229,16 +232,16 @@
         <div class="portfolio-wrap">
           <div class="portfolio-image">
             <a href="https://meeples.store/" target="_blank" class="desktop-image">
-              <img src="assets/image/screen-meeples-store-en.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-meeples-store-en.webp" alt="">
             </a>
             <a href="https://meeples.store/" target="_blank" class="mobile-image mobile-image-left">
-              <img src="assets/image/screen-mobile-meeples-store.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-meeples-store.webp" alt="">
             </a>
             <div class="portfolio-form form-button-right">
               <a href="#form" class="form-open-button">
                 <span class="form-button">Order <br>similar</span>
                 <i>
-                  <img src="assets/image/button-round.webp" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
                 </i>
               </a>
             </div>
@@ -269,24 +272,24 @@
         <ul class="footer-list">
           <li>
             <a href="http://t.me/EugeneVitko" target="_blank">
-              <img src="assets/image/telegram_icon.svg" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/telegram_icon.svg" alt="">
             </a>
           </li>
           <li class="whatsapp-icon">
             <a href="http://wa.me/375259519596" target="_blank">
-              <img src="assets/image/whatsapp_icon.svg" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/whatsapp_icon.svg" alt="">
             </a>
           </li>
           </li>
           <li>
             <a href="https://www.upwork.com/freelancers/~01079cfb24ea270d63?mp_source=share" target="_blank">
-              <img src="assets/image/upwork_icon.svg" class="upwork-icon" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/upwork_icon.svg" class="upwork-icon" alt="">
             </a>
           </li>
         </ul>
       </div>
     </div>
   </footer>
-  <script src="assets/script/script.js"></script>
+  <script src="<?php echo get_template_directory_uri();?>/assets/script/script.js"></script>
 </body>
 </html>

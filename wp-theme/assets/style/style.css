@@ -390,8 +390,6 @@ a:visited {
 
 .main {
   padding-top: 90px;
-  position: relative;
-  overflow: hidden;
 }
 
 /*MAIN BANNER SECTION*/
@@ -1066,15 +1064,4 @@ img.upwork-icon {
   .footer-container {
     flex-direction: column;
   }
-}
-
-/*CONTACT FORM*/
-.contact-form-block {
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--main-bg);
 }
