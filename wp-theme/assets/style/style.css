@@ -390,6 +390,8 @@ a:visited {
 
 .main {
   padding-top: 90px;
+  position: relative;
+  overflow: hidden;
 }
 
 /*MAIN BANNER SECTION*/
@@ -1064,4 +1066,114 @@ img.upwork-icon {
   .footer-container {
     flex-direction: column;
   }
+}
+
+/*CONTACT FORM*/
+.contact-form-block {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-bg);
+  padding-top: 90px;
+}
+
+.contact-form-block.form-open {
+}
+
+.contact-form-wrap {
+  position: relative;
+  width: 500px;
+  height: 600px;
+  border: 3px solid;
+  border-image-source: linear-gradient(148deg, #0779f2, #3d43c7, #791cc1);
+  border-image-slice: 1;
+}
+
+.contact-form {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.contact-form div form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 30px;
+}
+
+.contact-form-label {
+  font-size: 1.3em;
+  display: inline-block;
+  width: 100%;
+}
+
+.contact-form-label span {
+  display: inline-block;
+  width: 100%;
+}
+
+.contact-form-label span input {
+  display: inline-block;
+  height: 40px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+input #file-upload-button {
+  background-color: red !important;
+}
+
+.form-submit-label {
+  display: flex;
+  justify-content: center;
+}
+
+.form-submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 1.4em;
+  padding: 0 15px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(148deg, #0779f2, #3d43c7, #791cc1);
+  color: var(--main-color);
+}
+
+.contact-close-button {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+}
+
+.form-close {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: var(--main-color);
+  background-color: var(--main-bg);
+  font-size: 1.4em;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.form-close i {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-close i img {
+  width: 100%;
 }

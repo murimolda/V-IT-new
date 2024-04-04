@@ -56,7 +56,17 @@
   <main class="main">
   <div class="contact-form-block">
       <div class="contact-form-wrap">
-        <?php echo do_shortcode( '[contact-form-7 id="6824ff4" title="Header contact form"]' ); ?>
+        <div class="contact-form">
+          <?php echo do_shortcode( '[contact-form-7 id="6824ff4" title="Header contact form"]' ); ?>
+        </div>
+        <div class="contact-close-button">
+          <button class="form-close">
+            <span>✖</span>
+            <i>
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
+            </i>
+          </button>
+        </div>
       </div>
     </div>
     <section class="main-banner">

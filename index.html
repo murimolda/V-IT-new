@@ -46,14 +46,24 @@
         <a href="tel:+995550050089">+995550050089</a>
       </div>
       <div class="header-form">
-        <a href="#form"class="form-open-button">Request call back ⤑</a>
+        <a href="#" id="header-form-button" class="form-open-button">Request call back ⤑</a>
       </div>
     </div>
   </header>
   <main class="main">
     <div class="contact-form-block">
       <div class="contact-form-wrap">
-        <?php echo do_shortcode( '[contact-form-7 id="6824ff4" title="Header contact form"]' ); ?>
+        <div class="contact-form">
+          <?php echo do_shortcode( '[contact-form-7 id="6824ff4" title="Header contact form"]' ); ?>
+        </div>
+        <div class="contact-close-button">
+          <button class="form-close">
+            <span>✖</span>
+            <i>
+              <img src="assets/image/button-round.webp" alt="">
+            </i>
+          </button>
+        </div>
       </div>
     </div>
     <section class="main-banner">
