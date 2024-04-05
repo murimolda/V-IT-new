@@ -17,4 +17,18 @@ hamburgerWrap.addEventListener('click', navOpen);
 
 navItems.forEach(element => {
     element.addEventListener('click', navOpen);
-});
+});// HAMBURGER-NAV
+
+const formWrap = document.querySelector('.contact-form-block');
+const formLink = document.querySelector('#header-form-button');
+const forButton = document.querySelector('.contact-close-button');
+
+const formOpen = () =>{
+    formWrap.classList.toggle('form-open');
+    setTimeout(() => {
+        bodyWrap.classList.toggle('not-scroll');
+    }, 1000);
+};
+
+formLink.addEventListener('click', formOpen);
+forButton.addEventListener('click', formOpen);

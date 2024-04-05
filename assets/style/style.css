@@ -1071,7 +1071,7 @@ img.upwork-icon {
 /*CONTACT FORM*/
 .contact-form-block {
   position: absolute;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 100;
@@ -1084,6 +1084,7 @@ img.upwork-icon {
 }
 
 .contact-form-block.form-open {
+  display: flex;
 }
 
 .contact-form-wrap {
