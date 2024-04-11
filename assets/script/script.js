@@ -3,7 +3,7 @@
 const bodyWrap = document.querySelector('body');
 const navWrap = document.querySelector('.nav-wrap');
 const hamburgerWrap = document.querySelector('.hamburger-wrap');
-const navItems = document.querySelectorAll('.nav-item')
+const navItems = document.querySelectorAll('.nav-item');
 
 const navOpen = () =>{
     navWrap.classList.toggle('open');
@@ -17,18 +17,38 @@ hamburgerWrap.addEventListener('click', navOpen);
 
 navItems.forEach(element => {
     element.addEventListener('click', navOpen);
-});// HAMBURGER-NAV
+});
 
-const formWrap = document.querySelector('.contact-form-block');
-const formLink = document.querySelector('#header-form-button');
-const forButton = document.querySelector('.contact-close-button');
+// FORM-OPEN
 
-const formOpen = () =>{
-    formWrap.classList.toggle('form-open');
-    setTimeout(() => {
-        bodyWrap.classList.toggle('not-scroll');
-    }, 1000);
-};
+const contactFormBlock = document.querySelector('.contact-form-block');
+const formOpenButtons = document.querySelectorAll('.form-open-button');
+const formCloseButton = document.querySelector('.form-close');
+const contactForms = document.querySelectorAll('.contact-form');
 
-formLink.addEventListener('click', formOpen);
-forButton.addEventListener('click', formOpen);
+formOpenButtons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    const formKey = event.target.dataset.form;
+    openContactForm(formKey);
+  });
+});
+
+formCloseButton.addEventListener('click', closeContactForm);
+
+function openContactForm(formKey) {
+  contactForms.forEach(form => {
+    const dataForm = form.getAttribute('data-form');
+    if (dataForm === formKey) {
+      form.classList.add('form-active');
+    } else {
+      form.classList.remove('form-active');
+    }
+  });
+  contactFormBlock.classList.add('form-open');
+}
+
+function closeContactForm() {
+  contactFormBlock.classList.remove('form-open');
+}
+

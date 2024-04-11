@@ -29,7 +29,7 @@
             <li class="nav-item"><a href="#portfolio" class="root-item">Portfolio</a></li>
             <li class="nav-item"><a href="#contact" class="root-item">Contact</a></li>
             <li class="nav-item mobile-header-contact"><a href="tel:+995550050089">+995550050089</a></li>
-            <li class="nav-item header-form mobile-header-form"><a href="#form"class="form-open-button">Request call back ⤑</a></li>
+            <li class="nav-item header-form mobile-header-form"><a href="#" data-form="header" class="form-open-button">Request call back ⤑</a></li>
           </ul>
         </nav>
         <div class="hamburger-wrap">
@@ -49,15 +49,19 @@
         <a href="tel:+995550050089">+995550050089</a>
       </div>
       <div class="header-form">
-        <a href="#form"class="form-open-button">Request call back ⤑</a>
+      <a href="#" data-form="header" class="form-open-button">Request call back ⤑</a>
       </div>
     </div>
-  </header>
-  <main class="main">
-  <div class="contact-form-block">
+    <div class="contact-form-block">
       <div class="contact-form-wrap">
-        <div class="contact-form">
+        <div class="contact-form" data-form="header">
           <?php echo do_shortcode( '[contact-form-7 id="6824ff4" title="Header contact form"]' ); ?>
+        </div>
+        <div class="contact-form" data-form="product">
+          <?php echo do_shortcode( '[contact-form-7 id="f4dc341" title="Project contact form"]' ); ?>
+        </div>
+        <div class="contact-form" data-form="footer">
+          <?php echo do_shortcode( '[contact-form-7 id="23d3b4e" title="Footer contact form"]' ); ?>
         </div>
         <div class="contact-close-button">
           <button class="form-close">
@@ -69,6 +73,8 @@
         </div>
       </div>
     </div>
+  </header>
+  <main class="main">
     <section class="main-banner">
       <div class="container main-banner-container">
         <div class="main-banner-title">
@@ -182,10 +188,10 @@
               <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-magiccafe-eu.webp" alt="">
             </a>
             <div class="portfolio-form form-button-left">
-              <a href="#form" class="form-open-button">
+            <a href="#" data-form="product" class="form-open-button">
                 <span class="form-button">Order <br>similar</span>
                 <i>
-                  <img src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
+                  <img data-form="product" src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
                 </i>
               </a>
             </div>
@@ -200,10 +206,10 @@
               <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-cpgames-ru.webp" alt="">
             </a>
             <div class="portfolio-form form-button-right">
-              <a href="#form" class="form-open-button">
+            <a href="#" data-form="product" class="form-open-button">
                 <span class="form-button">Order <br>similar</span>
                 <i>
-                  <img src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
+                  <img data-form="product" src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
                 </i>
               </a>
             </div>
@@ -211,16 +217,16 @@
           <div class="portfolio-info text-right">
             <h3><a href="https://cpgames.ru/" target="_blank">cpgames.ru</a></h3>
             <h4>Online store for board games on WordPress</h4>
-            <p>New website from scratch according to the customer’s
-               specifications.</p>
+            <p>Website from scratch. Integration with ERP Baselinker.
+               Orders are transferred to Baselinker and processed there.</p>
           </div>
         </div>
         <div class="portfolio-wrap">
           <div class="portfolio-info">
             <h3><a href="https://sota.by/" target="_blank">sota.by</a></h3>
-            <h4>Online store for board games on WordPress</h4>
-            <p>Website from scratch. Integration with ERP Baselinker.
-               Orders are transferred to Baselinker and processed there.</p>
+            <h4>Crowdfunding platform for raising funds for the release of new board games.</h4>
+            <p>We redesigned the old website and created a new website using the CMS WordPress.
+               Enabled payment acceptance using cards and cryptocurrencies.</p>
           </div>
           <div class="portfolio-image">
             <a href="https://sota.by/" target="_blank" class="desktop-image">
@@ -230,10 +236,10 @@
               <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-sota-by.webp" alt="">
             </a>
             <div class="portfolio-form form-button-left">
-              <a href="#form" class="form-open-button">
+            <a href="#" data-form="product" class="form-open-button">
                 <span class="form-button">Order <br>similar</span>
                 <i>
-                  <img src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
+                  <img data-form="product" src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
                 </i>
               </a>
             </div>
@@ -248,10 +254,10 @@
               <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-meeples-store.webp" alt="">
             </a>
             <div class="portfolio-form form-button-right">
-              <a href="#form" class="form-open-button">
+            <a href="#" data-form="product" class="form-open-button">
                 <span class="form-button">Order <br>similar</span>
                 <i>
-                  <img src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
+                  <img data-form="product" src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
                 </i>
               </a>
             </div>
@@ -268,12 +274,15 @@
     </section>
   </main>
   <footer id="contact">
+  <?php
+      wp_footer();
+    ?>
     <div class="container footer-container">
       <div class="footer-contact">
         <a href="tel:+995550050089">+995550050089</a>
       </div>
       <div class="header-form">
-        <a href="#form"class="form-open-button">Request call back ⤑</a>
+      <a href="#" data-form="footer" class="form-open-button">Request call back ⤑</a>
       </div>
       <div class="footer-contact">
         <a href="mailto:supreme.kings.of.code@gmail.com">supreme.kings.of.code@gmail.com</a>
