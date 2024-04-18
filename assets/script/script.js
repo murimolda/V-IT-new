@@ -46,9 +46,15 @@ function openContactForm(formKey) {
     }
   });
   contactFormBlock.classList.add('form-open');
+  setTimeout(() => {
+    bodyWrap.classList.add('not-scroll');
+  }, 1000);
 }
 
 function closeContactForm() {
   contactFormBlock.classList.remove('form-open');
+  setTimeout(() => {
+    bodyWrap.classList.remove('not-scroll');
+}, 1000);
 }
 

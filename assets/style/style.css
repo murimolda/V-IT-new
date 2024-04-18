@@ -512,7 +512,7 @@ a:visited {
 
 @media screen and (max-width: 850px) {
   .main-banner {
-    background-image: url(../image/V-IT\ company\ outsoutcing2.jpg);
+    background-image: url(../image/main-banner-bg-mobile.webp);
     background-position: top right;
   }
   .main-technology-wrap {
@@ -707,7 +707,7 @@ a:visited {
 
 @media screen and (max-width: 850px) {
   .about-section {
-    background-image: url(../image/vecteezy_cyber-network-protection-future-technology-background_.jpg);
+    background-image: url(../image/about-bg-mobile.webp);
     background-position: center left;
   }
 }
@@ -1075,13 +1075,14 @@ img.upwork-icon {
   position: absolute;
   display: none;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   z-index: 100;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: var(--main-bg);
+  padding-top: 50px;
 }
 
 .contact-form-block.form-open {
@@ -1091,7 +1092,8 @@ img.upwork-icon {
 .contact-form-wrap {
   position: relative;
   width: 440px;
-  height: 500px;
+  min-height: 60vh;
+  height: max-content;
   border: 3px solid;
   border-image-source: linear-gradient(148deg, #0779f2, #3d43c7, #791cc1);
   border-image-slice: 1;
@@ -1112,11 +1114,11 @@ img.upwork-icon {
   display: flex;
   flex-direction: column;
   padding: 20px 10px;
-  gap: 20px;
+  gap: 15px;
 }
 
 .contact-form-label {
-  font-size: 1.1em;
+  font-size: 0.9em;
   display: inline-block;
   width: 100%;
 }
@@ -1128,9 +1130,15 @@ img.upwork-icon {
 
 .contact-form-label span input {
   display: inline-block;
-  height: 30px;
+  height: 24px;
   width: 100%;
   margin-top: 10px;
+}
+
+.contact-form-label span textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
 }
 
 .contact-form-label.file-upload-label span input {
