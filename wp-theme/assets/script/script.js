@@ -24,44 +24,37 @@ navItems.forEach(element => {
 const contactFormBlock = document.querySelector('.contact-form-block');
 const formOpenButtons = document.querySelectorAll('.form-open-button');
 const formCloseButton = document.querySelector('.form-close');
+const contactForms = document.querySelectorAll('.contact-form');
 
 formOpenButtons.forEach(button => {
   button.addEventListener('click', (event) => {
     event.preventDefault();
     const formKey = event.target.dataset.form;
-    console.log(event.target);
     openContactForm(formKey);
   });
 });
 
 formCloseButton.addEventListener('click', closeContactForm);
 
-const formData = {
-  header: { id: '6824ff4', title: 'Header contact form' },
-  product: { id: 'f4dc341', title: 'Product contact form' },
-  footer: { id: '23d3b4e', title: 'Footer contact form_copy' },
-};
-
-function createContactFormHTML(formId, formTitle) {
-  return `<?php echo do_shortcode( '[contact-form-7 id="${formId}" title="${formTitle}"]' ); ?>`;
-}
-
 function openContactForm(formKey) {
-  const formId = formData[formKey].id;
-  const formTitle = formData[formKey].title;
-  const contactFormHTML = createContactFormHTML(formId, formTitle);
-  contactFormBlock.querySelector('.contact-form').innerHTML = contactFormHTML;
+  contactForms.forEach(form => {
+    const dataForm = form.getAttribute('data-form');
+    if (dataForm === formKey) {
+      form.classList.add('form-active');
+    } else {
+      form.classList.remove('form-active');
+    }
+  });
   contactFormBlock.classList.add('form-open');
   setTimeout(() => {
     bodyWrap.classList.add('not-scroll');
-}, 1000);
+  }, 1000);
 }
 
 function closeContactForm() {
-    const contactForm = contactFormBlock.querySelector('.contact-form');
-    contactFormBlock.classList.remove('form-open');
-    setTimeout(() => {
-      bodyWrap.classList.remove('not-scroll');
-      contactForm.innerHTML = '';
-    }, 1000);
+  contactFormBlock.classList.remove('form-open');
+  setTimeout(() => {
+    bodyWrap.classList.remove('not-scroll');
+}, 1000);
 }
+
