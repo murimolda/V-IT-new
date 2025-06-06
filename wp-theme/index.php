@@ -115,6 +115,16 @@
                 </ul>
               </div>
               <div class="main-technology-item">
+                <h4>IT support</h4>
+                <ul>
+                  <li>Site availability control</li>
+                  <li>Load speed check</li>
+                  <li>Updating plugins</li>
+                  <li>Content editing</li>
+                  <li>Bug fixing</li>
+                </ul>
+              </div>
+              <div class="main-technology-item">
                 <h4>Marketing</h4>
                 <ul>
                   <li>Сontextual advertising</li>
@@ -129,14 +139,6 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="line-animation-box">
-      <p class="text1">
-        <span><span class="double-space">●</span>Online Catalog<span class="double-space">●</span>Landing Page<span class="double-space">●</span>Corporate Website<span class="double-space">●</span>ERP, CRM Integration<span class="double-space">●</span>Implementation of AI in business<span class="double-space">●</span>ADS<span class="double-space">●</span>SMM<span class="double-space">●</span>SEO<span class="double-space">●</span>Video-Сontent<span class="double-space">●</span>Writing Custom Programs</span>
-      </p>
-      <p class="text2">
-        <span><span class="double-space">●</span>Online Catalog<span class="double-space">●</span>Landing Page<span class="double-space">●</span>Corporate Website<span class="double-space">●</span>ERP, CRM Integration<span class="double-space">●</span>Implementation of AI in business<span class="double-space">●</span>ADS<span class="double-space">●</span>SMM<span class="double-space">●</span>SEO<span class="double-space">●</span>Video-Сontent<span class="double-space">●</span>Writing Custom Programs</span>
-      </p>
     </section>
     <section class="about-section" id="about">
       <div class="container about-container">
@@ -157,18 +159,11 @@
               <li>● Strict adherence to the technical specification</li>
             </ul>
           </div>
-          <div class="about-image">
-          </div>
+        <div class="about-image-wrap">
+          <img src="<?php echo get_template_directory_uri();?>/assets/image/photo_2024-05-20_19-59-48.jpg" alt="about-photo">
+        </div>
         </div>
       </div>
-    </section>
-    <section class="line-animation-box">
-      <p class="text1">
-        <span><span class="double-space">●</span>V-IT - best choices for your business<span class="double-space">●</span>Creation, development and promotion business on the Internet<span class="double-space">●</span>V-IT - best choices for your business<span class="double-space">●</span>Creation, development and promotion business on the Internet</span>
-      </p>
-      <p class="text2">
-        <span><span class="double-space">●</span>V-IT - best choices for your business<span class="double-space">●</span>Creation, development and promotion business on the Internet<span class="double-space">●</span>V-IT - best choices for your business<span class="double-space">●</span>Creation, development and promotion business on the Internet</span>
-      </p>
     </section>
     <section class="portfolio-section" id="portfolio">
       <div class="container">
@@ -182,16 +177,16 @@
           </div>
           <div class="portfolio-image">
             <a href="https://magiccafe.eu/" target="_blank" class="desktop-image">
-              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-magiccafe-eu.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-magiccafe-eu.webp" alt="project-image">
             </a>
             <a href="https://magiccafe.eu/" target="_blank" class="mobile-image">
-              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-magiccafe-eu.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-magiccafe-eu.webp" alt="project-image">
             </a>
             <div class="portfolio-form form-button-left">
             <a href="#" data-form="product" class="form-open-button">
                 <span class="form-button">Order <br>similar</span>
                 <i>
-                  <img data-form="product" src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
+                  <img data-form="product" src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="project-image">
                 </i>
               </a>
             </div>
@@ -200,16 +195,16 @@
         <div class="portfolio-wrap">
           <div class="portfolio-image">
             <a href="https://cpgames.ru/" target="_blank" class="desktop-image">
-              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-cpgames-ru.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-cpgames-ru.webp" alt="project-image">
             </a>
             <a href="https://cpgames.ru/" target="_blank" class="mobile-image mobile-image-left">
-              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-cpgames-ru.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-cpgames-ru.webp" alt="project-image">
             </a>
             <div class="portfolio-form form-button-right">
             <a href="#" data-form="product" class="form-open-button">
                 <span class="form-button">Order <br>similar</span>
                 <i>
-                  <img data-form="product" src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
+                  <img data-form="product" src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="project-image">
                 </i>
               </a>
             </div>
@@ -229,16 +224,16 @@
           </div>
           <div class="portfolio-image">
             <a href="https://sota.by/" target="_blank" class="desktop-image">
-              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-sota-by.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-sota-by.webp" alt="project-image">
             </a>
             <a href="https://sota.by/" target="_blank" class="mobile-image">
-              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-sota-by.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-sota-by.webp" alt="project-image">
             </a>
             <div class="portfolio-form form-button-left">
             <a href="#" data-form="product" class="form-open-button">
                 <span class="form-button">Order <br>similar</span>
                 <i>
-                  <img data-form="product" src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
+                  <img data-form="product" src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="project-image">
                 </i>
               </a>
             </div>
@@ -247,16 +242,16 @@
         <div class="portfolio-wrap">
           <div class="portfolio-image">
             <a href="https://meeples.store/" target="_blank" class="desktop-image">
-              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-meeples-store-en.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-meeples-store-en.webp" alt="project-image">
             </a>
             <a href="https://meeples.store/" target="_blank" class="mobile-image mobile-image-left">
-              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-meeples-store.webp" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-meeples-store.webp" alt="project-image">
             </a>
             <div class="portfolio-form form-button-right">
             <a href="#" data-form="product" class="form-open-button">
                 <span class="form-button">Order <br>similar</span>
                 <i>
-                  <img data-form="product" src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="">
+                  <img data-form="product" src="<?php echo get_template_directory_uri();?>/assets/image/button-round.webp" alt="project-image">
                 </i>
               </a>
             </div>
@@ -267,6 +262,28 @@
             <p>New website from scratch according to the customer’s
                specifications. Made integration with Paypal, Stripe,
                 Packeta delivery service and ERP Baselinker.</p>
+          </div>
+        </div>
+        <div class="portfolio-wrap">
+          <div class="portfolio-info">
+            <h3><a href="https://craftrepublic.ge/" target="_blank">craftrepublic.ge</a></h3>
+            <h4>The website of alco boutique in Georgia with the integration of georgian acquiring.</h4>
+          </div>
+          <div class="portfolio-image">
+            <a href="https://craftrepublic.ge/" target="_blank" class="desktop-image">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-craftrepublic-ge.png" alt="project-image">
+            </a>
+            <a href="https://craftrepublic.ge/" target="_blank" class="mobile-image">
+              <img src="<?php echo get_template_directory_uri();?>/assets/image/screen-mobile-craftrepublic-ge.png" alt="project-image">
+            </a>
+            <div class="portfolio-form form-button-left">
+              <a href="#" data-form="product" class="form-open-button">
+                <span class="form-button">Order <br>similar</span>
+                <i>
+                  <img data-form="product" src="assets/image/button-round.webp" alt="">
+                </i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
